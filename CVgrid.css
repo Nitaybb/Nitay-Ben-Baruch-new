@@ -1,0 +1,258 @@
+body {
+    background-image: url(imags/hairdresser\ backround.jpg) ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#GridContainer {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'left left main main main'
+    'left left main main main'
+    'item4 item4 item4 item4 item4'
+    'item5 item5 item5 item5 item5';
+}
+
+#item1 {
+    grid-area: header;
+    height: 100px;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    background-color: transparent;
+    color: rgb(75, 60, 32);
+    size: cover;
+    
+
+}
+
+#item2 {
+    grid-area: left;
+    height: 300px;
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+
+#item3{
+    grid-area: main;
+    height: 300px;
+    width: 85%;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: transparent;
+
+}
+
+#footer1{
+    grid-area: item4;
+    height: 250px;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+
+#footer2{
+    grid-area: item5;
+    size-adjust: 100%;
+    height: 348px;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+    background-image: url( imags/contact.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: 100%;
+
+}
+
+div{
+    border: 2px solid black ;width:90%;
+    
+   
+}
+
+/*@media only screen and (max-width: 1280px)
+{
+    #GridContainer {
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'left'
+        'main'
+        'item4'
+        'item5';
+    }
+    body {
+
+    background-image: url(imags/hairdresser\ backround.jpg) ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+div{
+    border: 2px solid black ;width:90%;
+    
+    
+   
+}
+#item1 {
+    grid-area: header;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    background-color: transparent;
+    color: rgb(75, 60, 32);
+    
+
+}
+
+#item2 {
+    grid-area: left;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+
+#item3{
+    grid-area: main;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+
+#footer1{
+    grid-area: item4;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+#footer1{
+    grid-area: item5;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+    
+
+}
+   
+
+    
+}
+*/ 
+
+@media only screen and (max-width: 700px){
+    #GridContainer {    
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'left'
+        'main'
+        'item4'
+        'item5';
+    }
+    body {
+
+    background-image: url(imags/hairdresser\ backround.jpg) ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    }
+#item1 {
+    grid-area: header;
+    height: 100px;
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    background-color: transparent;
+    color: rgb(75, 60, 32);
+    size: cover;
+    background-attachment: f;
+    
+
+}
+
+#item2 {
+    grid-area: left;
+    height: 300px;
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+
+#item3{
+    grid-area: main;
+    height: 300px;
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: transparent;
+
+}
+
+#footer1{
+    grid-area: item4;
+    height: 100px;
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+
+}
+#footer2{
+    grid-area: item5;
+    height: 100px;
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+    color: rgb(75, 60, 32);
+    background-color: white;
+    
+
+}
+
+
+}
