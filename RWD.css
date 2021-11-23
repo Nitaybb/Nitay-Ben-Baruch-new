@@ -1,0 +1,65 @@
+* {
+    border: 2px solid black;
+}
+
+.container {
+
+    display: grid;
+    grid-template-areas: 
+        'header header header header header'
+        'menu main main right right'
+        'menu footer footer footer footer'
+        ;
+}
+
+.item1 {
+    grid-area: header;
+    background-color: rgb(201, 195, 195);
+    height: 30vh;
+}
+
+.item2 {
+    grid-area: menu;
+    height: 90vh;
+}
+
+.item3 {
+    grid-area: main;
+    height: 60vh;
+    border-radius: 100%;
+    background-color: red;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+
+.item4 {
+    grid-area: right;
+    height: 60vh;
+}
+
+.item5 {
+    grid-area: footer;
+    height: 30vh;
+}
+
+@media only screen and (max-width:700px){
+
+    .container {
+        display: grid;
+        grid-template-areas: 
+            'header'
+            'menu'
+            'main'
+            'right'
+            'footer'
+            ;
+    }
+
+}
+
+@keyframes blink {
+    from {background-color: red;}
+     to {background-color: rgb(247, 0, 255);}
+
+}

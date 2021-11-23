@@ -1,0 +1,31 @@
+
+
+@keyframes rotatingPUG{
+    0% {
+        transform: rotate(0deg);
+
+
+    }
+    50% {
+        transform: rotate(-180deg)
+        
+       
+    }
+    100% {
+        transform: rotate(360deg)
+
+
+    }
+
+}
+
+img {
+
+    width: 80%;
+    animation-name: rotatingPUG;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+
