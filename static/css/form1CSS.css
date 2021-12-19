@@ -1,0 +1,50 @@
+* {
+    font-size: 18px;
+    
+}
+
+
+body {
+
+    background-image: url(imags/website-background.jpeg );
+    background-size: 100%;
+    
+}
+
+h1 {
+    font-size: 24pt;
+    font-style: italic;
+    text-decoration: underline;
+    color:black;
+     
+}
+
+#Contact {
+    font-size: 24pt;
+    font-style: italic;
+    text-decoration: underline;
+    color:black;
+     
+}
+ 
+.Gender1 {
+    font-size: 24pt;
+    font-style: italic;
+    color:black;
+}
+
+
+#SignForm {
+    float: left;
+    margin-left: 20%;
+}    
+
+#ContactForm {
+    float: right;
+    margin-right: 10%;
+}
+.Buxa {
+    background-color: rgb(201, 248, 235);
+}
+
+
