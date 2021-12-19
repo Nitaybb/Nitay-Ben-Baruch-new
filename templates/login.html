@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block body %}
+    <h1>Login Page</h1>
+    <h2>login form: </h2>
+
+
+    {% if session.username %}
+        <h2> Welcome back {{ session.username }}!</h2>
+    {% else %}
+    <form method="POST" action="/login">
+        Nickname: <input name="nickname" type="text">
+        <br>
+        <br>
+        Password:  <input name="password" type="password">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+    {% endif %}
+
+
+    {{ super() }}
+{% endblock %}

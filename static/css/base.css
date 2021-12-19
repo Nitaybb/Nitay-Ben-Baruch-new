@@ -1,0 +1,18 @@
+h1, h2, h4 {
+    text-align: center;
+    font-family: Georgia;
+}
+
+h4 {
+    text-align: center;
+    font-family: Georgia;
+}
+
+body {
+    background-image: url(/static/images/WEB_home_work_backround.jpg) ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia;
+}

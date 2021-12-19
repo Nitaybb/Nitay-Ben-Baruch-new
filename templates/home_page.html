@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block body %}
+ {% if session.username %}
+    <h1>Welcome back Dear {{ session.username }} </h1>
+    <h4>{{ session.username }} Now you can see our website and your details under "Assignment 8 on the menu </h4>
+{% else %}
+    <h1>Welcome To Home Page Dear Gust </h1>
+    <h4>To enjoy our websit you need to <a href="/login">Login</a> first</h4>
+{% endif %}
+
+{% endblock %}

@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+    Assignment8 - your details
+{% endblock %}
+
+{% block body %}
+{% if session.username %}
+        <h2>Hello {{ session.username }}! </h2>
+        <h4>User name: {{ session.username }}</h4>
+
+
+            <ol>
+            <h3>Profile Details:</h3>
+            <ul>
+                {% for key, value in profile.items() %}
+                    {{ key }}: {{ value }} <br>
+                {% endfor %}
+            </ul>
+
+            <h3>University:</h3>
+            <ol> {{ uni }} </ol>
+            <h3>Hobbies:</h3>
+            <ol>
+                   {{ hobbies[0] }} <br> {{ hobbies[2] }}
+            </ol>
+
+{% else %}
+    <br>
+    <br>
+    <h2>You must <a href="/login">Login</a> if you want to see about you </h2>
+
+{% endif %}
+
+
+
+
+
+    {{ super() }}
+{% endblock %}
