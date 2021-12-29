@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Assignment 9 Page
+{% endblock %}
+
+{% block header %}
+    <h1>This is the Assignment 9 Page!</h1>
+{% endblock %}
+
+{% block body %}
+    {% set page_name = 'Assignment 9 Page' %}
+
+    <h3>Search user by name:</h3>
+            <form action="/assignment9" method="GET" style="display: inline">
+                Name: <input name="name" type="text">
+                      <input type="submit" value="submit">
+            </form>
+    {% if user_first_name %}
+        <h3>Search results:</h3>
+    <p> <b>Full Name:</b> {{ user_first_name }} {{user_last_name}} <br>
+        <b>Email:</b> {{ user_email }}</p>
+    {% endif %}
+
+    {% if users_list %}
+        <h3>Search results:</h3>
+        {% for key, value in users_list.items() %}
+            <li>
+                 <b>Full Name:</b> {{ value.get('first_name') }} {{value.get('last_name') }},
+                <b>Email: </b>{{ value.get('email') }} <br>
+            </li>
+        {% endfor %}
+    {% endif %}
+
+    {% if session.new_user %}
+        <h2>Welcome {{ session.new_user }} !</h2>
+        <a href="/logout_assignment9">Log Out</a>
+
+    {% else %}
+    <h3>Sign up new user:</h3>
+            <form action="/assignment9" method="POST">
+                First Name: <input name="new_user" type="text"> <br> <br>
+                Last Name: <input name="new_user" type="text"> <br> <br>
+                Email: <input name="email" type="email">
+                 <input type="submit" value="submit">
+            </form>
+    {% endif %}
+{% endblock %}
