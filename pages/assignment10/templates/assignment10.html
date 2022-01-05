@@ -24,7 +24,7 @@
 
         <!-- UPDATE USER FORM -->
         <h2 class="h2_assi10">Update User Email </h2>
-        <form action="/update_user" method="POST">
+        <form action="/update_user_email" method="POST">
             First Name: <input name="first_name" type="text"> <br><br>
             Last Name: <input name="last_name" type="text"> <br><br>
             New Email: <input name="new_email" type="email"> <br><br>
@@ -40,9 +40,9 @@
         </form>
 
         {% if user_list %}
-            <h2 class="h2_assi10">User List:</h2>
+            <h2 class="h2_assi10">Users List:</h2>
             <ul>
-                {% for user in user_list %}
+                {% for user in users_list %}
                 <li>
                     <b>Full Name:</b> {{ user.first_name }}, {{ user.last_name }}, <b>Email:</b> {{ user.email }}
                 </li>
@@ -53,7 +53,7 @@
 
         {% else %}
         <br>
-        <form action="/user_list" method="GET">
+        <form action="/users_list" method="GET">
             <input type="submit" value="Show User List">
         </form>
 

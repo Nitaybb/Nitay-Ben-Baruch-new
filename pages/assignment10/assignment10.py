@@ -14,7 +14,7 @@ def assignment10s():
     return render_template('assignment10.html')
 
 
-# insert
+#### Insert new user to users table ####
 @assignment10.route('/insert_new_user', methods=['POST'])
 def insert_new_users():
     email = request.form['email']
@@ -24,11 +24,11 @@ def insert_new_users():
     interact_db(query=query, query_type='commit')
     global change_message
     change_message = "The user "+first_name + " " + last_name+" is add to users table"
-    return redirect('/user_list')
+    return redirect('/users_list')
 
 
-# update
-@assignment10.route('/update_user', methods=['POST'])
+#### Update user email by first & last neme ####
+@assignment10.route('/update_user_email', methods=['POST'])
 def update_users():
     first_name = request.form['first_name']
     last_name = request.form['last_name']
@@ -37,7 +37,7 @@ def update_users():
     interact_db(query=query, query_type='commit')
     global change_message
     change_message = "The email of the user "+first_name + " is updated to " + new_email + "."
-    return redirect('/user_list')
+    return redirect('/users_list')
 
 
 #### Delete user by first & last name ####
@@ -49,11 +49,11 @@ def delete_users():
     interact_db(query, query_type='commit')
     global change_message
     change_message = "The user: " + first_name + " " + last_name + " was deleted"
-    return redirect('/user_list')
+    return redirect('/users_list')
 
 
 #### Print user list ####
-@assignment10.route('/user_list')
+@assignment10.route('/users_list')
 def user_lists():
     query = "select * from users"
     query_result = interact_db(query=query, query_type='fetch')
