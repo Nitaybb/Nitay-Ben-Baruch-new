@@ -16,3 +16,7 @@ body {
     background-size: cover;
     font-family: Georgia;
 }
+header {
+    background-color: rgb(252, 227, 196);
+}
+

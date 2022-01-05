@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Assignment 10 Page
+{% endblock %}
+
+{% block header %}
+    <h1>This is the Assignment 10 Page!</h1>
+{% endblock %}
+
+{% block body %}
+    {% set page_name = 'Assignment 10 Page' %}
+
+    <div class="content">
+
+        <!-- NEW USER FORM -->
+        <h2 class="h2_assi10">Insert New User </h2>
+        <form action="/insert_new_user" method="POST">
+            First Name: <input name="first_name" type="text"> <br><br>
+            last Name: <input name="last_name" type="text"> <br><br>
+            Email: <input name="email" type="email"> <br><br>
+            <input type="submit" value="Insert">
+        </form>
+
+        <!-- UPDATE USER FORM -->
+        <h2 class="h2_assi10">Update User Email </h2>
+        <form action="/update_user" method="POST">
+            First Name: <input name="first_name" type="text"> <br><br>
+            Last Name: <input name="last_name" type="text"> <br><br>
+            New Email: <input name="new_email" type="email"> <br><br>
+            <input type="submit" value="Update">
+        </form>
+
+        <!-- DELETE USER FORM -->
+        <h2 class="h2_assi10">Delete User By Full Name</h2>
+        <form action="/delete_user" method="POST">
+            First Name: <input name="first_name" type="text"> <br><br>
+            Last Name: <input name="last_name" type="text"> <br><br>
+            <input type="submit" value="Delete">
+        </form>
+
+        {% if user_list %}
+            <h2 class="h2_assi10">User List:</h2>
+            <ul>
+                {% for user in user_list %}
+                <li>
+                    <b>Full Name:</b> {{ user.first_name }}, {{ user.last_name }}, <b>Email:</b> {{ user.email }}
+                </li>
+                {% endfor %}
+            </ul>
+
+        <p>{{ change_message }}</p>
+
+        {% else %}
+        <br>
+        <form action="/user_list" method="GET">
+            <input type="submit" value="Show User List">
+        </form>
+
+        {% endif %}
+
+    </div>
+{% endblock %}
+

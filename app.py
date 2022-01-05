@@ -12,6 +12,11 @@ my_users = {'user1': {'first_name': 'Nitay', 'last_name': 'Ben Baruch', 'email':
             'user6': {'first_name': 'Volley', 'last_name': 'Ball', 'email': 'user6@Xmail.com'}
             }
 
+# Assignment 10
+
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
+
 
 # Assignment 9
 @app.route("/assignment9", methods=['GET', 'POST'])

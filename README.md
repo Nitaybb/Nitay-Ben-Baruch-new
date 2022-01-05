@@ -12,3 +12,10 @@
 * I add my details on the app.py under the assignment8 func
 * Using for loop and dictionary and only if the user is login he will see my uni, profile and my hobbies.
 
+
+# Assignment 9
+### The explain is in the PDF file
+
+
+# Assignment 10
+### The explain is in the PDF file
